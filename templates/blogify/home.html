@@ -1,0 +1,26 @@
+{% if user.is_authenticated %}
+    <div id="wrapper">
+
+        {% include 'siad/navbar.html' %}
+
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <!-- Page Heading -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <s-header></s-header>
+                        <s-breadcrumb></s-breadcrumb>
+                    </div>
+                </div>
+                <!-- /.row -->
+                <div class="row">
+                    <div class="col-lg-12" ui-view='content'>
+                    </div>
+                </div>
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+        <!-- /#page-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+{% endif %}

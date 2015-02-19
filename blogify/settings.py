@@ -36,6 +36,9 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'compressor',
+    'authentication',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -81,3 +84,35 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_URL = '/static/'
+STATIC_ROOT = 'staticfiles'
+
+STATICFILES_DIRS = (
+        os.path.join(BASE_DIR, 'static'),
+        )
+
+STATICFILES_FINDERS = (
+        'django.contrib.staticfiles.finders.FileSystemFinder',
+        'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+        'compressor.finders.CompressorFinder',
+        )
+
+COMPRESS_ENABLE = os.environ.get('COMPRESS_ENABLED', False)
+
+TEMPLATE_DIRS = (
+        os.path.join(BASE_DIR, 'templates'),
+        )
+
+REST_FRAMEWORK = {
+        'DEFAULT_AUTHENTICATION_CLASSES':(
+            'rest_framework.authentication.SessionAuthentication',
+            ),
+        'PAGINATE_BY': 10,                 # Default to 10
+        'PAGINATE_BY_PARAM': 'page_size',  # Allow client to override, using `?page_size=xxx`.
+        'MAX_PAGINATE_BY': 100             # Maximum limit allowed when using `?page_size=xxx`.
+        }
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+AUTH_USER_MODEL = 'authentication.User'

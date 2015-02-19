@@ -1,0 +1,11 @@
+{% load compress %}
+{% load staticfiles %}
+
+{% compress css %}
+<link type="text/css" rel="stylesheet" href="{% static 'vendors/bootstrap/dist/css/bootstrap.css' %}" />
+<link type="text/css" rel="stylesheet" href="{% static 'vendors/bootstrap-rtl/dist/css/bootstrap-rtl.css' %}" />
+<link type="text/css" rel="stylesheet" href="{% static 'css/theme.css' %}" />
+<link type="text/css" rel="stylesheet" href="{% static 'vendors/font-awesome/css/font-awesome.css' %}" />
+<link type="text/css" rel="stylesheet" href="{% static 'vendors/angular-notify/dist/angular-notify.css' %}" />
+<link type="text/css" rel="stylesheet" href="{% static 'vendors/angular-ui-grid/ui-grid.css' %}" />
+{% endcompress %}
