@@ -2,13 +2,10 @@
 {% load staticfiles %}
 
 {% compress js %}
-<script type="text/javascript" src="{% url 'siad.views.cached_javascript_catalog' %}"></script>
 
 <!-- Vendors -->
 <script type="text/javascript" src="{% static 'vendors/jquery/dist/jquery.js' %}"></script>
 
-<script type="text/javascript" src="{% static 'vendors/momentjs/min/moment-with-locales.min.js' %}"></script>
-<script type="text/javascript" src="{% static 'vendors/moment-jalaali/build/moment-jalaali.js' %}"></script>
 
 <script type="text/javascript" src="{% static 'vendors/bootstrap/dist/js/bootstrap.js' %}"></script>
 
@@ -16,56 +13,20 @@
 <script type="text/javascript" src="{% static 'vendors/angular-cookies/angular-cookies.js' %}"></script>
 <script type="text/javascript" src="{% static 'vendors/angular-notify/dist/angular-notify.js' %}"></script>
 <script type="text/javascript" src="{% static 'vendors/angular-ui-router/release/angular-ui-router.js' %}"></script>
-<script type="text/javascript" src="{% static 'vendors/angular-ui-grid/ui-grid.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/app/ui-grid/ui.grid.config.js' %}"></script>
 
-<script type="text/javascript" src="{% static 'vendors/mtjs-string-format/mtjs-string-format.js' %}"></script>
-<script type="text/javascript" src="{% static 'vendors/mtng-validator/dist/mtng-validator.js' %}"></script>
-
-<!-- Siad App -->
-<script type="text/javascript" src="{% static 'js/app/siad.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/app/siad.config.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/app/siad.routers.js' %}"></script>
+<!-- Blogify App -->
+<script type="text/javascript" src="{% static 'js/app/blogify.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/app/blogify.config.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/app/blogify.routers.js' %}"></script>
 
 <script type="text/javascript" src="{% static 'js/app/authentication/authentication.module.js' %}"></script>
 <script type="text/javascript" src="{% static 'js/app/authentication/services/authentication.service.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/app/authentication/services/user_management.service.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/app/authentication/services/group.service.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/app/authentication/services/profile.service.js' %}"></script>
 <script type="text/javascript" src="{% static 'js/app/authentication/controllers/login.controller.js' %}"></script>
 <script type="text/javascript" src="{% static 'js/app/authentication/controllers/logout.controller.js' %}"></script>
 <script type="text/javascript" src="{% static 'js/app/authentication/controllers/register.controller.js' %}"></script>
 <script type="text/javascript" src="{% static 'js/app/authentication/controllers/profile.controller.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/app/authentication/controllers/user_management.controller.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/app/authentication/controllers/user_list.controller.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/app/authentication/controllers/user_create.controller.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/app/authentication/controllers/group.controller.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/app/authentication/controllers/group_create.controller.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/app/authentication/controllers/group_list.controller.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/app/authentication/directives/account_name.directive.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/app/authentication/directives/user_list.directive.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/app/authentication/directives/group_list.directive.js' %}"></script>
-
-<script type="text/javascript" src="{% static 'js/app/logger/logger.module.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/app/logger/services/logger.service.js' %}"></script>
-
-<script type="text/javascript" src="{% static 'js/app/notify/notify.module.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/app/notify/services/notify.service.js' %}"></script>
-
-<script type="text/javascript" src="{% static 'js/app/header/header.module.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/app/header/controllers/header.controller.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/app/header/directives/header.directive.js' %}"></script>
-
-<script type="text/javascript" src="{% static 'js/app/breadcrumb/breadcrumb.module.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/app/breadcrumb/controllers/breadcrumb.controller.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/app/breadcrumb/directives/breadcrumb.directive.js' %}"></script>
-
-<script type="text/javascript" src="{% static 'js/app/interceptor/interceptor.module.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/app/interceptor/services/interceptor.service.js' %}"></script>
-
-<script type="text/javascript" src="{% static 'js/app/jalalical/jalalical.module.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/app/jalalical/filters/jalali.filter.js' %}"></script>
 
 <script type="text/javascript" src="{% static 'js/app/home/home.module.js' %}"></script>
 <script type="text/javascript" src="{% static 'js/app/home/controllers/home.controller.js' %}"></script>
-
 {% endcompress %}

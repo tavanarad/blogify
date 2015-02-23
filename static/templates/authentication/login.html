@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="col-md-4 col-md-offset-4">
+        <h1> Login </h1>
+        <div class="well">
+            <form role="form" ng-submit="vm.login()">
+                <div class="form-group">
+                    <label for="user__email"> Email </label>
+                    <input type="text" id="user__email" class="form-control" ng-model="vm.user.email"/>
+                </div>
+                <div class="form-group">
+                    <label for="user__password"> Password </label>
+                    <input type="password" id="user__password" class="form-control" ng-model="vm.user.password"/>
+                </div>
+                <div class="form-group">
+                    <button type="submit"> Login </button>
+                    <a ui-sref="register"> Create a new account </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -6,7 +6,7 @@ from authentication import models
 
 
 class UserSerializer(serializers.ModelSerializer):
-    password = serializers.CharField(write_only=True, required=Flase)
+    password = serializers.CharField(write_only=True, required=False)
     confirm_password = serializers.CharField(write_only=True, required=False)
 
     class Meta:
@@ -33,3 +33,5 @@ class UserSerializer(serializers.ModelSerializer):
             instance.save()
 
         update_session_auth_hash(self.context.get('request'), instance)
+
+        return instance;

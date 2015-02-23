@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <h1>Registration</h1>
+        <div class="well">
+            <form role="form" id="registratoin_form" ng-submit="vm.register()">
+                <div class="form-group">
+                    <label for="user__name"> Name </label>
+                    <input type="text" id="user__name" class="form-control" ng-model="vm.user.name"/>
+                </div>
+                <div class="form-group">
+                    <label for="user__email"> Email </label>
+                    <input type="email" id="user__email" class="form-control" ng-model="vm.user.email" />
+                </div>
+                <div class="form-group">
+                    <label for="user__username"> Username </label>
+                    <input type="text" id="user__username" class="form-control" ng-model="vm.user.username"/>
+                </div>
+                <div class="form-group">
+                    <label for="user__password"> Password </label>
+                    <input type="password" id="user__password" class="form-control" ng-model="vm.user.password"/>
+                </div>
+                <div class="form-group">
+                    <button role="submit" ng-disabled="registratoin_form.$invalid" disabled>Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
